@@ -9,7 +9,8 @@ def create_button(master, text, width = 120, height= 50, border_width= 2, corner
                            border_width = border_width,
                            corner_radius = corner_radius,
                            border_color = border_color,
-                           text = text)
+                           text = text
+    )
     return button
 
 bt1 = create_button(master=m_app.main_app.FRAME,
