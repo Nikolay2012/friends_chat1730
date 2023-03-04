@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import modules.screen_app as m_app
 
-width_input = 250
+width_input = 420
 height_input = 50
 
 font_size = ctk.CTkFont(
@@ -13,7 +13,7 @@ font_size = ctk.CTkFont(
 text = ctk.StringVar()
 
 text_input = ctk.CTkEntry(
-    master= m_app.main_app,
+    master= m_app.main_app.FRAME3,
     width= width_input,
     height= height_input,
     fg_color= "white",
@@ -22,4 +22,8 @@ text_input = ctk.CTkEntry(
     textvariable= text
 )
 
-text_input.place(x = m_app.main_app.APP_WIDTH // 2, y = m_app.main_app.APP_HEIGHT - height_input // 2, anchor = ctk.CENTER)
+text_input.place(
+    x = m_app.main_app.FRAME3._current_width // 2 - 37,
+    y = m_app.main_app.FRAME3._current_height // 2,
+    anchor = ctk.CENTER
+)

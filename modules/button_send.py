@@ -17,8 +17,9 @@ def send_message():
     button_label.place(x = m_app.main_app.APP_WIDTH // 2, y = m_input.font_size._size // 2, anchor = ctk.CENTER)
 
 
+
 send_button = ctk.CTkButton(
-    master = m_app.main_app, 
+    master = m_app.main_app.FRAME3, 
     text ="->",
     width = button_width,
     height = button_height,
@@ -27,7 +28,7 @@ send_button = ctk.CTkButton(
 )
 
 send_button.place(
-    x = m_app.main_app.APP_WIDTH // 2 + m_input.width_input // 2 + margin_left, 
-    y = m_app.main_app.APP_HEIGHT - button_height // 2, 
+    x = m_app.main_app.FRAME3._current_width // 2 + m_input.width_input // 2, 
+    y = m_app.main_app.FRAME3._current_height - button_height, 
     anchor = ctk.CENTER
 )
